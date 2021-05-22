@@ -3,5 +3,6 @@ streamlit==0.81.1
 opencv-python==4.5.1.48
 numpy==1.19.5
 keras==2.4.3
+pywin32==300
 
 #pypiwin32
