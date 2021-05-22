@@ -5,7 +5,9 @@ import numpy as np
 from PIL import Image, ImageEnhance
 import os
 import cv2
-from keras.models import load_model
+import tensorflow as tf
+from tensorflow.python.keras.models import load_model
+#from keras.models import load_model
 from win32com.client import Dispatch
 
 def speak(text):
