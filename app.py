@@ -8,14 +8,14 @@ import cv2
 import tensorflow as tf
 from tensorflow.python.keras.models import load_model
 import re
-import long_responses as long	
+#import long_responses as long	
 
 #from keras.models import load_model
 from win32com.client import Dispatch
 
-def speak(text):
+"""def speak(text):
 	speak=Dispatch(("SAPI.SpVoice"))
-	speak.Speak(text)
+	speak.Speak(text)"""
 model = load_model('MyTrainingModel.h5')
 
 def preprocessing(img):
@@ -58,16 +58,16 @@ def main():
 			if probabilityValue>0.50:
 				if classIndex==0:
 					st.success("Detected Emphysema")
-					speak("Detected Emphysema")
+					#speak("Detected Emphysema")
 				elif classIndex==1:
 					st.success("Detected Fibrosis")
-					speak("Detected Fibrosis")
+					#speak("Detected Fibrosis")
 				elif classIndex==2:
 					st.success("Detected Normal")
-					speak("Detected Normal")
+					#speak("Detected Normal")
 				elif classIndex==3:
 					st.success("Detected Pneumonia")
-					speak("Detected Pneumonia")
+					#speak("Detected Pneumonia")
 				
 			#except Exception as e:
 				#st.error("Connection Problem,Refresh Again")
